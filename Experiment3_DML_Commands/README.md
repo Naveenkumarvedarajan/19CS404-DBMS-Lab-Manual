@@ -46,124 +46,167 @@ Used to retrieve records from a table.
 SELECT column1, column2 FROM table_name WHERE condition;
 ```
 **Question 1**
---
--- Paste Question 1 here
+
+Write a SQL query to Delete a Specific Surgery whose ID is 3 or surgeon ID is 4.
+Sample table: Surgeries
 
 ```sql
--- Paste your SQL code below for Question 1
+DELETE FROM Surgeries
+WHERE surgery_id= 3 OR surgery_id= 4;
 ```
 
 **Output:**
 
-![Output1](output.png)
+![image](https://github.com/user-attachments/assets/2a4e19c2-b169-4a4c-96e2-df8f9da70872)
 
 **Question 2**
----
--- Paste Question 2 here
+
+Write a SQL query to Retrieve the department name and location concatenated with a comma
+Table name: dept
 
 ```sql
--- Paste your SQL code below for Question 2
+SELECT
+dname||', '||loc AS dept_location
+FROM dept;
 ```
 
 **Output:**
 
-![Output2](output.png)
+![image](https://github.com/user-attachments/assets/016ba235-b127-42dc-87a5-89a0fc320061)
 
 **Question 3**
----
--- Paste Question 3 here
+
+Write a query to fetch 5 to 9 records from EmployeeInfo table.
 
 ```sql
--- Paste your SQL code below for Question 3
+SELECT *
+FROM EmployeeInfo
+ORDER BY EmpID
+LIMIT 5 OFFSET 4;
 ```
 
 **Output:**
 
-![Output3](output.png)
+![image](https://github.com/user-attachments/assets/d919d33c-df40-41e6-9532-7578cbbc6e8a)
 
 **Question 4**
----
--- Paste Question 4 here
+
+Write a SQL query to find customers who are from the city 'London' who have a grade greater than 200. Return customer_id, cust_name, city, grade, and salesman_id.
+Sample table: customer
 
 ```sql
--- Paste your SQL code below for Question 4
+SELECT 
+customer_id,
+cust_name,
+city,
+grade,
+salesman_id
+FROM customer
+WHERE city IN ('London') AND grade>200;
 ```
 
 **Output:**
 
-![Output4](output.png)
+![image](https://github.com/user-attachments/assets/616c059e-bb9c-487d-890c-74b655fd4455)
 
 **Question 5**
----
--- Paste Question 5 here
+
+Write a SQL query to Delete a Specific Surgery whose ID is 3
+Sample table: Surgeries
 
 ```sql
--- Paste your SQL code below for Question 5
+DELETE FROM Surgeries
+WHERE surgery_id=3;
 ```
 
 **Output:**
 
-![Output5](output.png)
+![image](https://github.com/user-attachments/assets/6b481314-d3bf-4f9a-8e2c-de2f5426b749)
 
 **Question 6**
----
--- Paste Question 6 here
+
+Write a SQL query to retrieve the year, month, and day from the hiredate column in the emp table.
 
 ```sql
--- Paste your SQL code below for Question 6
+SELECT
+strftime('%Y',hiredate) AS Year,
+strftime('%m',hiredate) AS Month,
+strftime('%d',hiredate) AS Day
+FROM emp;
 ```
 
 **Output:**
 
-![Output6](output.png)
+![image](https://github.com/user-attachments/assets/c60e1f60-ef4f-45e3-8648-4c50d5ff56d5)
 
 **Question 7**
----
--- Paste Question 7 here
+
+Write a SQL query to Delete customers from 'customer' table where 'WORKING_AREA' is 'New York'.
+Sample table: Customer
 
 ```sql
--- Paste your SQL code below for Question 7
+DELETE FROM Customer
+WHERE WORKING_AREA IN ("New York");
 ```
 
 **Output:**
 
-![Output7](output.png)
+![image](https://github.com/user-attachments/assets/8ac1f3d2-527c-4068-aea5-e4692defb3a3)
 
 **Question 8**
----
--- Paste Question 8 here
+
+For  Increase the selling price per unit by 3 for all products supplied by supplier ID 4 in the sales table.
+PRODUCTS TABLE
 
 ```sql
--- Paste your SQL code below for Question 8
+UPDATE sales
+SET sell_price=sell_price+3
+WHERE product_id IN(
+SELECT product_id
+FROM products
+WHERE Supplier_id=4
+);
 ```
 
 **Output:**
 
-![Output8](output.png)
+![image](https://github.com/user-attachments/assets/804ef491-1b1c-4414-a69d-691da049ff60)
 
 **Question 9**
----
--- Paste Question 9 here
+
+Write a SQL query to remove rows from the table 'customer' with the following condition -
+1. 'cust_country' must be 'India',
+2. 'cus_city' must not be 'Chennai',
+Sample table: Customer
 
 ```sql
--- Paste your SQL code below for Question 9
+DELETE FROM Customer
+WHERE CUST_COUNTRY IN ('India') AND CUST_CITY NOT IN ('Chennai');
 ```
 
 **Output:**
 
-![Output9](output.png)
+![image](https://github.com/user-attachments/assets/70ac8a87-63b4-4419-a9ad-ffc7c5d8294e)
 
 **Question 10**
----
--- Paste Question 10 here
+
+Write a SQL statement to Increase the selling price per unit by 5% for product ID 15 who's sale is on '2023-01-31'.
+sales(sale_id,sale_date,product_id,quantity,sell_price,total_sell_price)
 
 ```sql
--- Paste your SQL code below for Question 10
+UPDATE sales
+SET sell_price=sell_price+(0.05*sell_price)
+WHERE product_id=15 AND sale_date='2023-01-31';
 ```
 
 **Output:**
 
-![Output10](output.png)
+![image](https://github.com/user-attachments/assets/99747ab5-2279-4834-8aab-10336e58a610)
+
+
+## GRADE:
+
+![image](https://github.com/user-attachments/assets/4c8b104a-216c-49bd-a165-7e8cf64ae2e3)
 
 ## RESULT
 Thus, the SQL queries to implement DML commands have been executed successfully.
