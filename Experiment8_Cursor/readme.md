@@ -77,7 +77,7 @@ END;
 - Implement exception handling to catch the relevant exceptions and display appropriate messages.
 
 #### Program:
-
+```
 sqlBEGIN
 DECLARE
    CURSOR emp_cur IS
@@ -98,7 +98,7 @@ EXCEPTION
 END;
 /
 
-
+````
 *Output:*  
 The program should display the employee details or an error message.
 
@@ -121,6 +121,7 @@ The program should display the employee details or an error message.
 - Implement exception handling to catch and display relevant error messages.
 
 #### Program:
+```
 sql
 ALTER TABLE employees1 ADD salary NUMBER;
 
@@ -153,7 +154,7 @@ EXCEPTION
 END;
 /
 
-
+```
 *Output:*  
 The program should display the employee details within the specified salary range or an error message if no data is found.
 
@@ -177,6 +178,7 @@ The program should display the employee details within the specified salary rang
 - Implement exception handling to catch the relevant exceptions.
 
 #### Program:
+```
 sql
 SELECT table_name FROM user_tables WHERE table_name = 'EMPLOYEES1';
 
@@ -207,7 +209,7 @@ EXCEPTION
 END;
 /
 
-
+```
 
 *Output:*  
 The program should display employee names with their department numbers or the appropriate error message if no data is found.
@@ -231,6 +233,7 @@ The program should display employee names with their department numbers or the a
 - Implement exception handling to catch the relevant exceptions and display appropriate messages.
 
 #### Program:
+```
 sql
 DECLARE
    CURSOR emp_cur IS SELECT * FROM employees;
@@ -255,7 +258,7 @@ EXCEPTION
    WHEN OTHERS THEN
       DBMS_OUTPUT.PUT_LINE('Error: ' || SQLERRM);
 END;
-
+```
 
 *Output:*  
 The program should display employee records or the appropriate error message if no data is found.
@@ -279,6 +282,7 @@ The program should display employee records or the appropriate error message if 
 - Implement exception handling to handle NO_DATA_FOUND or other errors that may occur.
 
 #### Program:
+```
 sql
 DECLARE
    CURSOR emp_cur IS
@@ -301,7 +305,7 @@ EXCEPTION
       DBMS_OUTPUT.PUT_LINE('Error during update: ' || SQLERRM);
 END;
 /
-
+```
 
 *Output:*  
 The program should update employee salaries and display a message, or it should display an error message if no data is found.
